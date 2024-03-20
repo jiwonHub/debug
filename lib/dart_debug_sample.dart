@@ -8,9 +8,10 @@ void main() {
 
 class YukymController {
 
+  final nowDate = DateTime.now();
+
   String getTyA() {
-    final now = DateTime.now();
-    final month = now.month;
+    final month = nowDate.month;
 
     if (month >= 1 && month <= 12) {
       return '경오${(month + 1) ~/ 2}국';
@@ -20,8 +21,7 @@ class YukymController {
   }
 
   String getTyB() {
-    final now = DateTime.now();
-    final hour = now.hour;
+    final hour = nowDate.hour;
 
     if (hour >= 0 && hour < 24) {
       return '갑자${(hour + 1) ~/ 2}국';
